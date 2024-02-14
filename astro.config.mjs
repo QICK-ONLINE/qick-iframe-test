@@ -4,5 +4,6 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
       site: 'https://karelSoupa.github.io',
   base: '/qick-iframe-test',
+
 });
 

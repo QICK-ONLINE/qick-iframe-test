@@ -4,16 +4,28 @@ import Card from '../components/Card.astro';
 ---
 
 <Layout title="Welcome to Astro.">
+	 <header style="height: 80px" class="gradient">
+        <h1>Nadpis</h1>
+    </header>
 	<main>
+<script is:raw src="/qick-iframe-test/iframeResizer.js"></script>
 
-	  <!--<iframe src="https://test.qick.cz/aktuality/322/?embed=true" width="100%" height="500px" allowfullscreen="allowfullscreen"></iframe>-->
-	  <iframe src="https://www.qick.cz/aktuality/323/?embed=true" width="100%" height="500px" allowfullscreen="allowfullscreen"></iframe>
-	  <iframe src="https://www.qick.cz/sportoviste/497/rezervace?embed=true" width="100%" height="500px" allowfullscreen="allowfullscreen"></iframe>
-
+	  <!--<iframe src="https://www.qick.cz/aktuality/323/?embed=true" width="100%" height="500px" allowfullscreen="allowfullscreen"></iframe>-->
+	  <iframe id="myIframe" src="http://localhost:4000/aktuality/323/?embed=true"  allowfullscreen="allowfullscreen"></iframe>
+<script is:raw>
+  iFrameResize({ log: true }, '#myIframe')
+</script>
 	</main>
 </Layout>
 
+
 <style>
+
+	 iframe {
+    width: 1px;
+    min-width: 100%;
+  }
+
 	main {
 		margin: auto;
 		padding: 1rem;
